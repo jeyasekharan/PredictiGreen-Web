@@ -11,6 +11,23 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="top-contact-bar">
+      <div class="container top-contact-wrap">
+        <div class="contact-item">
+          <span class="contact-icon">☎</span>
+          <span>+91 8939044647</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">✉</span>
+          <span>info@5pgs.com</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">🕒</span>
+          <span>Mon - Fri: 8:00 to 18:00 / Sun: 8:00 to 14:00</span>
+        </div>
+      </div>
+    </div>
+
     <header class="site-header">
       <div class="container nav-wrap">
         <div class="brand">
@@ -25,9 +42,8 @@
 
         <nav class="main-nav" aria-label="Main navigation">
           <a class="active" href="#">Home</a>
-          <a href="#services">Services</a>
           <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          <a href="#services">Services</a>        
         </nav>
       </div>
     </header>
@@ -46,12 +62,11 @@
       </div>
 
       <div class="carousel-content container">
-        <span class="eyebrow">Welcome to PredictiGreen Solutions
-</span>
+        <span class="eyebrow">Welcome to PredictiGreen Solutions</span>
         <h1>Revolutionizing Renewable Energy Solutions</h1>
         <p>
-We Specialize in Failure Prediction, Data - Driven Decision Making, and Cost Optimization for Oil,Gas,PetroChemicals and Renewable Energy Industries.
-           </p>
+          We Specialize in Failure Prediction, Data-Driven Decision Making, and Cost Optimization for Oil, Gas, PetroChemicals and Renewable Energy Industries.
+        </p>
       </div>
 
       <div class="carousel-dots" aria-label="Slider navigation">
@@ -68,10 +83,12 @@ We Specialize in Failure Prediction, Data - Driven Decision Making, and Cost Opt
           <h2>Lump Sum Turnkey Projects</h2>
         </div>
 
-        <div class="project-grid">
-          <article class="feature-card">
-            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80" alt="Solar power project in India" />
-            <div class="card-body">
+        <div class="project-showcase reveal">
+          <article class="project-feature image-left reveal">
+            <div class="project-media">
+              <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80" alt="Solar power project in India" />
+            </div>
+            <div class="project-copy">
               <span class="card-tag">Solar Power</span>
               <h3>Solar Power Projects in India</h3>
               <p>
@@ -80,20 +97,24 @@ We Specialize in Failure Prediction, Data - Driven Decision Making, and Cost Opt
             </div>
           </article>
 
-          <article class="feature-card">
-            <img src="images/cybersecurity.jpeg" alt="Cybersecurity and network installation" />
-            <div class="card-body">
+          <article class="project-feature image-right reveal">
+            <div class="project-copy">
               <span class="card-tag">Network Systems</span>
               <h3>Cybersecurity & Network Installations</h3>
               <p>
                 Secure, resilient network deployment with advanced cybersecurity measures to protect critical infrastructure and communication systems.
               </p>
             </div>
+            <div class="project-media">
+              <img src="images/cybersecurity.jpeg" alt="Cybersecurity and network installation" />
+            </div>
           </article>
 
-          <article class="feature-card">
-            <img src="images/telecom.jpg" alt="CCTV, PAGA and telecom systems" />
-            <div class="card-body">
+          <article class="project-feature image-left reveal">
+            <div class="project-media">
+              <img src="images/telecom.jpg" alt="CCTV, PAGA and telecom systems" />
+            </div>
+            <div class="project-copy">
               <span class="card-tag">Integrated Safety</span>
               <h3>CCTV, PAGA & Telecom Systems</h3>
               <p>
@@ -108,8 +129,8 @@ We Specialize in Failure Prediction, Data - Driven Decision Making, and Cost Opt
             <span class="mini-label dark">Successfully Executed Projects</span>
           </div>
 
-          <div class="executed-grid">
-            <div class="executed-card">
+          <div class="executed-grid reveal">
+            <div class="executed-card reveal">
               <span class="card-badge">01</span>
               <div class="executed-text">
                 <strong>Obsolescence Upgrades</strong>
@@ -117,7 +138,7 @@ We Specialize in Failure Prediction, Data - Driven Decision Making, and Cost Opt
               </div>
             </div>
 
-            <div class="executed-card">
+            <div class="executed-card reveal">
               <span class="card-badge">02</span>
               <div class="executed-text">
                 <strong>ICSS Systems</strong>
@@ -125,7 +146,7 @@ We Specialize in Failure Prediction, Data - Driven Decision Making, and Cost Opt
               </div>
             </div>
 
-            <div class="executed-card">
+            <div class="executed-card reveal">
               <span class="card-badge">03</span>
               <div class="executed-text">
                 <strong>Roles Roys Control System</strong>
@@ -133,7 +154,7 @@ We Specialize in Failure Prediction, Data - Driven Decision Making, and Cost Opt
               </div>
             </div>
 
-            <div class="executed-card">
+            <div class="executed-card reveal">
               <span class="card-badge">04</span>
               <div class="executed-text">
                 <strong>Control & Emergency Shutdown</strong>
@@ -141,7 +162,7 @@ We Specialize in Failure Prediction, Data - Driven Decision Making, and Cost Opt
               </div>
             </div>
 
-            <div class="executed-card">
+            <div class="executed-card reveal">
               <span class="card-badge">05</span>
               <div class="executed-text">
                 <strong>Blowdown Valves</strong>
@@ -149,7 +170,7 @@ We Specialize in Failure Prediction, Data - Driven Decision Making, and Cost Opt
               </div>
             </div>
 
-            <div class="executed-card">
+            <div class="executed-card reveal">
               <span class="card-badge">06</span>
               <div class="executed-text">
                 <strong>Emerson & ABB Metering Systems</strong>
@@ -168,59 +189,220 @@ We Specialize in Failure Prediction, Data - Driven Decision Making, and Cost Opt
           <h2>Deep Expertise Across Process, Power, and Safety Systems</h2>
         </div>
 
-        <div class="experience-list">
-          <article class="experience-item image-left">
-            <div class="experience-media">
+        <div class="experience-grid reveal">
+          <article class="experience-card reveal">
+            <div class="experience-image">
               <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=900&q=80" alt="Life cycle management instrumentation" />
             </div>
-            <div class="experience-copy">
-              <span class="experience-no">01</span>
+            <div class="experience-body">
               <h3>Life Cycle Management Instrumentation</h3>
               <p>Smart asset strategies and instrumentation modernization to extend performance, reliability, and compliance across industrial facilities.</p>
             </div>
           </article>
 
-          <article class="experience-item image-right">
-            <div class="experience-copy">
-              <span class="experience-no">02</span>
+          <article class="experience-card reveal">
+            <div class="experience-image">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="ICSS green and brown field projects" />
+            </div>
+            <div class="experience-body">
               <h3>ICSS Green/Brown Field Projects</h3>
               <p>Integrated control system upgrades for both new installations and brownfield retrofits, designed for operational continuity and efficiency.</p>
             </div>
-            <div class="experience-media">
-              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="ICSS green and brown field projects" />
-            </div>
           </article>
 
-          <article class="experience-item image-left">
-            <div class="experience-media">
+          <article class="experience-card reveal">
+            <div class="experience-image">
               <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="Project management and controls" />
             </div>
-            <div class="experience-copy">
-              <span class="experience-no">03</span>
+            <div class="experience-body">
               <h3>Project Management & Project Controls</h3>
               <p>Structured planning, schedule integration, risk review, and quality governance to keep complex projects on track and within budget.</p>
             </div>
           </article>
 
-          <article class="experience-item image-right">
-            <div class="experience-copy">
-              <span class="experience-no">04</span>
+          <article class="experience-card reveal">
+            <div class="experience-image">
+              <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80" alt="Contracting and procurement" />
+            </div>
+            <div class="experience-body">
               <h3>Contracting & Procurement</h3>
               <p>Efficient sourcing, vendor coordination, and contract management to ensure cost-effective delivery of critical systems and equipment.</p>
             </div>
-            <div class="experience-media">
-              <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80" alt="Contracting and procurement" />
+          </article>
+
+          <article class="experience-card reveal">
+            <div class="experience-image">
+              <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=80" alt="Refinery, LNG and heavy oil facilities" />
+            </div>
+            <div class="experience-body">
+              <h3>Refinery, LNG Facilities & Heavy Oil</h3>
+              <p>Specialized execution for high-risk process environments where throughput, safety, and asset integrity are mission critical.</p>
             </div>
           </article>
 
-          <article class="experience-item image-left">
-            <div class="experience-media">
-              <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=80" alt="Refinery, LNG and heavy oil facilities" />
+          <article class="experience-card reveal">
+            <div class="experience-image">
+              <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=80" alt="Sour service projects" />
             </div>
-            <div class="experience-copy">
-              <span class="experience-no">05</span>
-              <h3>Refinery, LNG Facilities & Heavy Oil</h3>
-              <p>Specialized execution for high-risk process environments where throughput, safety, and asset integrity are mission critical.</p>
+            <div class="experience-body">
+              <h3>Sour Service Projects (20% H2S)</h3>
+              <p>Specialized corrosion-resistant design, inspection, and operational support for high-H2S process environments and sour gas service systems.</p>
+            </div>
+          </article>
+
+          <article class="experience-card reveal">
+            <div class="experience-image">
+              <img src="https://images.unsplash.com/photo-1558494949cc5b2d3f8d9f1b4b?auto=format&fit=crop&w=900&q=80" alt="Obsolescence management" />
+            </div>
+            <div class="experience-body">
+              <h3>Obsolescence Management</h3>
+              <p>Lifecycle asset planning and replacement strategies that reduce downtime, support compliance, and extend production reliability.</p>
+            </div>
+          </article>
+
+          <article class="experience-card reveal">
+            <div class="experience-image">
+              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80" alt="AI and machine learning applications" />
+            </div>
+            <div class="experience-body">
+              <h3>AI/ML Applications</h3>
+              <p>Predictive analytics and intelligent monitoring systems used to improve performance, optimize maintenance decisions, and reduce operational risk.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="industry-section reveal">
+      <div class="container">
+        <div class="section-head">
+          <span class="mini-label">Industries We Serve</span>
+          <h2>Oil, Gas, Petrochemical, Microchip and Power Production Industry</h2>
+        </div>
+
+        <div class="industry-highlight">
+          <p class="industry-quote">
+            Failure Prediction, Data Driven Decision Making Proposal to Enhance Production and Optimize cost.
+          </p>
+        </div>
+
+        <div class="industry-grid reveal">
+          <article class="industry-card reveal">
+            <div class="industry-image-wrap">
+              <img src="images/section3/vessels_pipeline.webp" alt="Vessels and pipeline" />
+            </div>
+            <div class="industry-body">
+              <h3>Vessels and Pipeline</h3>
+            </div>
+          </article>
+
+          <article class="industry-card reveal">
+            <div class="industry-image-wrap">
+              <img src="images/section3/heat_exchangers.webp" alt="Heat exchangers furnace boilers" />
+            </div>
+            <div class="industry-body">
+              <h3>Heat Exchangers, Furnace, Boilers</h3>
+            </div>
+          </article>
+
+          <article class="industry-card reveal">
+            <div class="industry-image-wrap">
+              <img src="images/section3/pumps_compressors.jpeg" alt="Pumps and compressors" />
+            </div>
+            <div class="industry-body">
+              <h3>Pumps, Compressors</h3>
+            </div>
+          </article>
+
+          <article class="industry-card reveal">
+            <div class="industry-image-wrap">
+              <img src="images/section3/metering_systems.jpeg" alt="Metering systems" />
+            </div>
+            <div class="industry-body">
+              <h3>Metering Systems</h3>
+            </div>
+          </article>
+
+          <article class="industry-card reveal">
+            <div class="industry-image-wrap">
+              <img src="images/section3/motors.jpg" alt="Electrical network and motors" />
+            </div>
+            <div class="industry-body">
+              <h3>Electrical Network, Motors</h3>
+            </div>
+          </article>
+
+          <article class="industry-card reveal">
+            <div class="industry-image-wrap">
+              <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80" alt="Power distribution and overhead lines" />
+            </div>
+            <div class="industry-body">
+              <h3>Power Distribution and Overhead Line Prediction</h3>
+            </div>
+          </article>
+
+          <article class="industry-card reveal">
+            <div class="industry-image-wrap">
+              <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=900&q=80" alt="Advanced multivariable process control" />
+            </div>
+            <div class="industry-body">
+              <h3>Advanced Multi Variable Process Control</h3>
+            </div>
+          </article>
+
+          <article class="industry-card reveal">
+            <div class="industry-image-wrap">
+              <img src="images/section3/turbomachinery.webp" alt="Turbo machinery controls" />
+            </div>
+            <div class="industry-body">
+              <h3>Turbo Machinery Controls</h3>
+            </div>
+          </article>
+
+          <article class="industry-card reveal">
+            <div class="industry-image-wrap">
+              <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80" alt="Obsolescence management" />
+            </div>
+            <div class="industry-body">
+              <h3>Turnkey Cost-Effective Obsolescence Management</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="green-energy-section reveal">
+      <div class="container">
+        <div class="section-head">
+          <span class="mini-label">Green Energy Production Industries</span>
+          <h2>Efficiency Measurement and Maintenance</h2>
+        </div>
+
+        <div class="green-energy-grid">
+          <article class="industry-card reveal">
+            <div class="industry-image-wrap">
+              <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80" alt="Solar energy" />
+            </div>
+            <div class="industry-body">
+              <h3>Solar</h3>
+            </div>
+          </article>
+
+          <article class="industry-card reveal">
+            <div class="industry-image-wrap">
+              <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=900&q=80" alt="Wind energy" />
+            </div>
+            <div class="industry-body">
+              <h3>Wind</h3>
+            </div>
+          </article>
+
+          <article class="industry-card reveal">
+            <div class="industry-image-wrap">
+              <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80" alt="Battery storage efficiency maintenance" />
+            </div>
+            <div class="industry-body">
+              <h3>Battery Storage, Efficiency and Maintenance Prediction</h3>
             </div>
           </article>
         </div>
@@ -255,6 +437,22 @@ We Specialize in Failure Prediction, Data - Driven Decision Making, and Cost Opt
         const nextSlide = (currentSlide + 1) % slides.length;
         showSlide(nextSlide);
       }, 3000);
+
+      const revealItems = document.querySelectorAll('.reveal');
+
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealItems.forEach((item) => revealObserver.observe(item));
     </script>
   </body>
 </html>
