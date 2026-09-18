@@ -40,10 +40,22 @@
           </div>
         </div>
 
-        <nav class="main-nav" aria-label="Main navigation">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-navigation"
+          aria-label="Open navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
           <a class="active" href="#">Home</a>
           <a href="#projects">Projects</a>
-          <a href="#services">Services</a>        
+          <a href="#industries">Services</a>
         </nav>
       </div>
     </header>
@@ -327,7 +339,7 @@
       </div>
     </section>
 
-    <section class="industry-section reveal">
+    <section class="industry-section reveal" id="industries">
       <div class="container">
         <div class="section-head">
           <span class="mini-label">Industries We Serve</span>
@@ -516,6 +528,60 @@
         const nextSlide = (currentSlide + 1) % slides.length;
         showSlide(nextSlide);
       }, 3000);
+
+      const navToggle = document.querySelector('.nav-toggle');
+      const mainNav = document.querySelector('.main-nav');
+      const navLinks = document.querySelectorAll('.main-nav a');
+
+      function setMenuState(isOpen) {
+        if (!navToggle || !mainNav) {
+          return;
+        }
+
+        mainNav.classList.toggle('open', isOpen);
+        navToggle.classList.toggle('active', isOpen);
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      }
+
+      function setActiveNavLink(activeLink) {
+        navLinks.forEach((link) => {
+          link.classList.toggle('active', link === activeLink);
+        });
+      }
+
+      if (navToggle) {
+        navToggle.addEventListener('click', () => {
+          const isOpen = !mainNav.classList.contains('open');
+          setMenuState(isOpen);
+        });
+      }
+
+      navLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+          setActiveNavLink(link);
+          setMenuState(false);
+
+          const targetId = link.getAttribute('href');
+
+          if (!targetId || targetId === '#') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return;
+          }
+
+          const targetSection = document.querySelector(targetId);
+
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 767) {
+          setMenuState(false);
+        }
+      });
 
       const revealItems = document.querySelectorAll('.reveal');
 
