@@ -151,45 +151,78 @@
           <h2>Lump Sum Turnkey Projects</h2>
         </div>
 
-        <div class="project-showcase reveal">
-          <article class="project-feature image-left reveal">
-            <div class="project-media">
-              <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80" alt="Solar power project in India" />
-            </div>
-            <div class="project-copy">
-              <span class="card-tag">Solar Power</span>
-              <h3>Solar Power Projects in India</h3>
-              <p>
-                End-to-end solar installations delivering efficient, scalable, and sustainable power generation for industrial and commercial applications.
-              </p>
-            </div>
-          </article>
+        <div class="project-scroll-wrap reveal">
+          <div class="project-scroll-controls" aria-label="Project slider controls">
+            <button class="project-scroll-btn project-scroll-prev" type="button" aria-label="Scroll left">&#8249;</button>
+            <button class="project-scroll-btn project-scroll-next" type="button" aria-label="Scroll right">&#8250;</button>
+          </div>
 
-          <article class="project-feature image-right reveal">
-            <div class="project-copy">
-              <span class="card-tag">Network Systems</span>
-              <h3>Cybersecurity & Network Installations</h3>
-              <p>
-                Secure, resilient network deployment with advanced cybersecurity measures to protect critical infrastructure and communication systems.
-              </p>
-            </div>
-            <div class="project-media">
-              <img src="images/cybersecurity.jpeg" alt="Cybersecurity and network installation" />
-            </div>
-          </article>
+          <div class="project-showcase" tabindex="0">
+            <article class="project-feature image-left reveal">
+              <div class="project-media">
+                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80" alt="Solar power project in India" />
+              </div>
+              <div class="project-copy">
+                <span class="card-tag">Solar Power</span>
+                <h3>Solar Power Projects in India</h3>
+                <p>
+                  End-to-end solar installations delivering efficient, scalable, and sustainable power generation for industrial and commercial applications.
+                </p>
+              </div>
+            </article>
 
-          <article class="project-feature image-left reveal">
-            <div class="project-media">
-              <img src="images/telecom.jpg" alt="CCTV, PAGA and telecom systems" />
-            </div>
-            <div class="project-copy">
-              <span class="card-tag">Integrated Safety</span>
-              <h3>CCTV, PAGA & Telecom Systems</h3>
-              <p>
-                Integrated surveillance, public address, and telecom infrastructure solutions designed for safety, communication, and operational efficiency.
-              </p>
-            </div>
-          </article>
+            <article class="project-feature image-right reveal">
+              <div class="project-copy">
+                <span class="card-tag">Network Systems</span>
+                <h3>Cybersecurity & Network Installations</h3>
+                <p>
+                  Secure, resilient network deployment with advanced cybersecurity measures to protect critical infrastructure and communication systems.
+                </p>
+              </div>
+              <div class="project-media">
+                <img src="images/cybersecurity.jpeg" alt="Cybersecurity and network installation" />
+              </div>
+            </article>
+
+            <article class="project-feature image-left reveal">
+              <div class="project-media">
+                <img src="images/telecom.jpg" alt="CCTV, PAGA and telecom systems" />
+              </div>
+              <div class="project-copy">
+                <span class="card-tag">Integrated Safety</span>
+                <h3>CCTV, PAGA & Telecom Systems</h3>
+                <p>
+                  Integrated surveillance, public address, and telecom infrastructure solutions designed for safety, communication, and operational efficiency.
+                </p>
+              </div>
+            </article>
+
+            <article class="project-feature image-right reveal">
+              <div class="project-copy">
+                <span class="card-tag">Engineering</span>
+                <h3>Complete Engineering Procurement and Installation & Construction</h3>
+                <p>
+                  Full-scope engineering, procurement, installation, and construction services delivering turnkey execution for complex industrial projects.
+                </p>
+              </div>
+              <div class="project-media">
+                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80" alt="Engineering procurement and construction project" />
+              </div>
+            </article>
+
+            <article class="project-feature image-left reveal">
+              <div class="project-media">
+                <img src="images/ai_asset_management.webp" alt="AI asset management" />
+              </div>
+              <div class="project-copy">
+                <span class="card-tag">AI & Analytics</span>
+                <h3>AI Asset Management</h3>
+                <p>
+                  Intelligent asset performance monitoring and predictive analytics to improve reliability, reduce downtime, and optimize lifecycle decisions.
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -582,6 +615,28 @@
           setMenuState(false);
         }
       });
+
+      const projectShowcase = document.querySelector('.project-showcase');
+      const projectPrevBtn = document.querySelector('.project-scroll-prev');
+      const projectNextBtn = document.querySelector('.project-scroll-next');
+
+      if (projectShowcase && projectPrevBtn && projectNextBtn) {
+        const getCardWidth = () => {
+          const firstCard = projectShowcase.querySelector('.project-feature');
+          if (!firstCard) return 280;
+          const styles = window.getComputedStyle(projectShowcase);
+          const gap = parseFloat(styles.columnGap || styles.gap || '20');
+          return firstCard.getBoundingClientRect().width + gap;
+        };
+
+        projectPrevBtn.addEventListener('click', () => {
+          projectShowcase.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+        });
+
+        projectNextBtn.addEventListener('click', () => {
+          projectShowcase.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+        });
+      }
 
       const revealItems = document.querySelectorAll('.reveal');
 
