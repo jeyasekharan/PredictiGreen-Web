@@ -491,6 +491,12 @@ a {
   margin: 0 auto;
 }
 
+@media (min-width: 1200px) {
+  .container {
+    width: min(1280px, 94vw);
+  }
+}
+
 .site-header {
   background: #ffffff;
   border-bottom: 1px solid #e4ece7;
