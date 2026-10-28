@@ -756,8 +756,6 @@ a {
 .carousel-content .suryai-name {
   display: flex;
   align-items: center;
-  gap: 8px;
-
   margin: 0 0 6px;
   color: #ffffff;
   font-size: clamp(1.2rem, 2.3vw, 1.5rem);
@@ -768,8 +766,8 @@ a {
 
 .carousel-content .suryai-name .sun-icon {
   flex: 0 0 auto;
-  margin: 0;
   font-size: 1em;
+  margin-right: 8px;
 }
 
 .carousel-content .suryai-highlight {
@@ -872,7 +870,7 @@ a {
   }
 
   .carousel-content .suryai-name {
-      font-size: 15px;
+    font-size: clamp(1.2rem, 2.3vw, 2.5rem);
   }
 
   .carousel-content .suryai-content .suryai-tagline {
