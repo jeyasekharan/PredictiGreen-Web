@@ -720,14 +720,193 @@ a {
   backdrop-filter: blur(4px);
 }
 
+
+/* Keep the welcome heading transparent */
+.carousel-content .eyebrow {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ========================================
+   SURYAI GLASS PANEL — DESKTOP
+======================================== */
+
+.carousel-content .suryai-content {
+  display: block;
+  width: min(420px, 100%);
+  max-width: 100%;
+  margin: 0;
+  padding: 16px 20px;
+
+  color: #ffffff;
+  text-align: left;
+
+  /* Glass effect matching the welcome label */
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-radius: 16px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
+}
+
+/* SuryAI brand name */
+.carousel-content .suryai-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 0 0 6px;
+  color: #ffffff;
+  font-size: clamp(1.2rem, 2.3vw, 1.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.carousel-content .suryai-name .sun-icon {
+  flex: 0 0 auto;
+  margin: 0;
+  font-size: 1em;
+}
+
+.carousel-content .suryai-highlight {
+  color: #FFC300;
+}
+
+/* Keep SuryAI text independent of the carousel animation */
+.carousel-content .suryai-content p {
+  max-width: none;
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.875rem;
+  line-height: 1.5;
+
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
+
+/* Tagline */
+.carousel-content .suryai-content .suryai-tagline {
+  margin-bottom: 8px;
+  color: #D9F99D;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+/* Product description */
+.carousel-content .suryai-content .suryai-description {
+  margin-bottom: 10px;
+}
+
+/* Divider */
+.carousel-content .suryai-content hr {
+  width: 100%;
+  margin: 12px 0 10px;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  opacity: 1;
+}
+
+/* Brand ownership text */
+.carousel-content .suryai-content .suryai-brand {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+
+/* ========================================
+ TABLET AND MOBILE
+======================================== */
+
+@media (max-width: 767px) {
+  .hero-carousel {
+      height: 400px;
+  }
+
+  .carousel-content .suryai-content {
+      width: min(390px, 100%);
+      padding: 13px 16px;
+      border-radius: 13px;
+  }
+
+  .carousel-content .suryai-name {
+      font-size: 1.6rem;
+  }
+
+  .carousel-content .suryai-content .suryai-tagline {
+      font-size: 0.92rem;
+  }
+
+  .carousel-content .suryai-content p {
+      font-size: 0.8rem;
+      line-height: 1.45;
+  }
+
+  .carousel-content .suryai-content .suryai-brand {
+      font-size: 0.72rem;
+  }
+}
+
+
+/* ========================================
+ SMALL MOBILE SCREENS
+======================================== */
+
+@media (max-width: 575px) {
+  .hero-carousel {
+      height: 390px;
+  }
+
+  .carousel-content .suryai-content {
+      width: 100%;
+      max-width: 340px;
+      padding: 12px 14px;
+      border-radius: 12px;
+  }
+
+  .carousel-content .suryai-name {
+      font-size: 15px;
+  }
+
+  .carousel-content .suryai-content .suryai-tagline {
+      font-size: 0.86rem;
+  }
+
+  .carousel-content .suryai-content p {
+      font-size: 0.76rem;
+      line-height: 1.4;
+  }
+
+  .carousel-content .suryai-content .suryai-brand {
+      font-size: 0.68rem;
+  }
+}
+
+
 .carousel-content h1 {
   max-width: 620px;
   margin: 18px 0 12px;
   color: #ffffff;
-  font-size: clamp(2.5rem, 4vw, 4.3rem);
-  line-height: 1.06;
-  font-weight: 800;
+  font-size: clamp(1rem, 4vw, 3rem);
+  line-height: 1;
+  font-weight: 600;
 }
+
+.sun-icon {
+  color: #FFC300; /* Bright yellow/gold color */
+  font-size: 1.2em; /* Slightly larger than text */
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+
 
 .carousel-content p {
   max-width: 560px;
@@ -739,6 +918,8 @@ a {
   transform: translateY(18px);
   animation: textReveal 0.7s ease forwards;
 }
+
+
 
 @keyframes textReveal {
   from {
@@ -1610,12 +1791,13 @@ a {
     letter-spacing: 0.06em;
   }
 
-  .carousel-content h1 {
+  /* .carousel-content h1 {
     max-width: 320px;
     margin: 14px 0 10px;
     font-size: 1.95rem;
     line-height: 1.1;
-  }
+    color: #ffffff;
+  } */
 
   .carousel-content p {
     max-width: 320px;
@@ -1839,11 +2021,11 @@ a {
     font-size: 0.56rem;
   }
 
-  .carousel-content h1 {
+  /* .carousel-content h1 {
     max-width: 270px;
     font-size: 1.58rem;
     margin: 12px 0 8px;
-  }
+  } */
 
   .carousel-content p {
     max-width: 270px;
